@@ -1,23 +1,30 @@
 import "../CharCard/style.css"
 
-function ChardCard({ name, image, species, status }){
+function ChardCard({ name, image, species, status }) {
 
 
-    return(
+    return (
         <div className="container">
-            <h1 className="characterName">{name}</h1>
-            <img src={image} alt={name} className="cardImage"/>
-            <p className="characterSpecie">{species}</p>
 
             {status === 'Alive' ?
-            (
-                <p className="alive">{status}</p>
-            )    
-            :
-            (
-                <p className="dead">{status}</p>
-            )
-        }
+                (
+                    <div className="alive">
+                        <p className="pAlive">{status}</p>
+                        <h1 className="characterName">{name}</h1>
+                        <img src={image} alt={name} className="cardImage" />
+                        <p className="characterSpecie">{species}</p>
+                    </div>
+                )
+                :
+                (
+                    <div className="dead">
+                    <p className="pDead">{status}</p>
+                        <h1 className="characterName">{name}</h1>
+                        <img src={image} alt={name} className="cardImage" />
+                        <p className="characterSpecie">{species}</p>
+                    </div>
+                )
+            }
         </div>
     )
 }
