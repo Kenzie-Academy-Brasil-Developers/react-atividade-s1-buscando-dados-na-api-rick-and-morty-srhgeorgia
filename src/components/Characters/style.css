@@ -1,0 +1,19 @@
+.personas {
+    display: flex;
+    flex-wrap: wrap;
+    text-overflow: ellipsis;
+}
+
+.title{
+    margin: 25px 0 25px 0;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (min-width: 361px) and (max-width: 760px){
+    .personas{
+        overflow: scroll;
+        flex-wrap: nowrap;
+        margin-left: 10px;
+    }
+}
